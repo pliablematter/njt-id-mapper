@@ -73,14 +73,16 @@ function mapPromise() {
 
     function map(resolve) {
 
-        var mapped = {};
+        var mappings = {};
+        var reverseMappings = {};
         _.each(gtfs, mapper);
         function mapper(id, name) {
             var shortCode = shortCodes[name];
             if(!shortCode) {
                 var override = overrides.override[name];
                 if(override) {
-                    mapped[id] = override;
+                    mappings[id] = override;
+                    reverseMappings[override] = id;
                 } else {
                     if(!_.contains(overrides.exclude, name)) {
                         console.error('Missing mapping for ' + name);
@@ -88,10 +90,12 @@ function mapPromise() {
                 }
             }
             else {
-                mapped[id] = shortCode;
+                mappings[id] = shortCode;
+                reverseMappings[shortCode] = id;
             }
         }
-        console.log(JSON.stringify(mapped));
+        console.log("GTFS > Shortcode:\n" + JSON.stringify(mappings));
+        console.log("Shortcode > GTFS:\n" + JSON.stringify(reverseMappings));
 
         resolve();
     }

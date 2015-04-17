@@ -1,6 +1,6 @@
 This is a script for creating mappings between New Jersey Transit (NJT) GTFS ids and shortcodes, which are used for the realtime API.
 
-It seems like this may be a common need, so I'm putting it out on github to help anyone who needs to do the same thing.
+It seems like this may be a common need when creating NJT apps, so I'm putting it out on github to help anyone who needs to do the same thing.
 
 The GFTS stops.txt and shortcode list are current as of 4/17/15 but may need to be updated in the future.
 
