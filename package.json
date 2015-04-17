@@ -1,0 +1,17 @@
+{
+  "name": "station-mapper",
+  "version": "0.0.0",
+  "description": "Outputs JSON with mappings between NJT GTFS ids and 2 char shortcodes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fast-csv": "^0.6.0",
+    "change-case": "^2.3.0",
+    "es6-promise": "^2.1.0",
+    "underscore": "^1.8.3"
+  }
+}
