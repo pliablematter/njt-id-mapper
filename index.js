@@ -96,6 +96,7 @@ function mapPromise() {
         }
         console.log("GTFS > Shortcode:\n" + JSON.stringify(mappings));
         console.log("Shortcode > GTFS:\n" + JSON.stringify(reverseMappings));
+        console.log("Name > Shortcode:\n" + JSON.stringify(shortCodes));
 
         resolve();
     }
